@@ -359,6 +359,7 @@ class PostActivity : AppCompatActivity() {
         val text = binding.edtTitle.text.toString()
         val fDatabse = FirebaseDatabase.getInstance().getReference("Post/$idPost")
         fDatabse.child("title").setValue(text)
+        binding.edtTitle.isEnabled = false
         binding.linearLayout3.visibility = View.VISIBLE
         binding.linearLayout4.visibility = View.VISIBLE
         binding.linearLayout5.visibility = View.VISIBLE
